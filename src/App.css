@@ -1,0 +1,24 @@
+.custom-primary {
+  background-color: #294963;
+}
+
+.bg-custom-primary {
+  background-color: #294963;
+}
+
+.custom-secondary {
+  background-color: #436988;
+}
+
+.bg-custom-secondary {
+  background-color: #436988;
+}
+
+.App {
+  max-width: 670px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px dashed #bababa;
+  height: 100vh;
+}
