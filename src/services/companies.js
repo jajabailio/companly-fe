@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const url = "http://localhost:3030/api/companies";
-const testUrl = "https://companly-be.herokuapp.com";
+const testUrl = "https://companly-be.herokuapp.com/companies";
 
 export async function getCompanies() {
   try {
