@@ -20,5 +20,6 @@
   margin-left: auto;
   margin-right: auto;
   border: 1px dashed #bababa;
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 30px;
 }

@@ -5,7 +5,7 @@ const CompanyDashboard = ({ active, inactive, companiesLength }) => {
     <div className="navbar bg-custom-primary">
       <div className="container-fluid">
         <div className="row w-100">
-          <div className="col-3">
+          <div className="col-sm-3 col-lg-3 col-md-3 col-xs-12">
             <div
               className="card w-100 h-100 text-light p-3 fs-3"
               style={{ backgroundColor: "#436988" }}
@@ -21,7 +21,7 @@ const CompanyDashboard = ({ active, inactive, companiesLength }) => {
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div
               className="card w-100 h-100 text-light p-3 fs-3"
               style={{ backgroundColor: "#436988" }}
@@ -37,7 +37,7 @@ const CompanyDashboard = ({ active, inactive, companiesLength }) => {
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-sm-3 col-lg-3 col-md-3 col-xs-12">
             <div
               className="card w-100 h-100 text-light p-3 fs-3"
               style={{ backgroundColor: "#436988" }}

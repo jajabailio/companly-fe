@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPencilAlt } from "react-icons/fa";
 
-const CompanyUsers = ({ users }) => {
+const CompanyUsers = ({ users, updateUserModal }) => {
   return (
     <div className="container">
       <div className="container mb-4">
@@ -12,7 +12,10 @@ const CompanyUsers = ({ users }) => {
         <div className="card p-2 border-0" key={user._id}>
           <div className="row w-100" style={{ height: "70px" }}>
             <div className="col-2 m-auto text-center">
-              <FaPencilAlt className="fs-1" />
+              <FaPencilAlt
+                className="fs-1"
+                onClick={() => updateUserModal(user)}
+              />
             </div>
             <div
               className="col-7 px-2 py-0 m-0 h-100"

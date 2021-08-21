@@ -27,7 +27,7 @@ const CompanyCard = ({ company }) => {
           </div>
           <div className="col-3 text-center mx-0 px-0">
             <div className="card-title">
-              <h3>6</h3>
+              <h3>{company.users.length}</h3>
               <p className="m-0">Users</p>
             </div>
           </div>
