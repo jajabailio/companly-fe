@@ -38,7 +38,7 @@ export async function createCompany(data) {
     return response.data;
   } catch (err) {
     console.log(err);
-    return true;
+    return { error: true, data: err };
   }
 }
 
@@ -75,6 +75,6 @@ export async function updateCompany(id, { name, address }) {
     return response.data;
   } catch (err) {
     console.log(err);
-    return true;
+    return { error: true, data: err };
   }
 }

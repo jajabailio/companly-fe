@@ -9,7 +9,7 @@ export async function createUser(data) {
     return response.data;
   } catch (err) {
     console.log(err);
-    return true;
+    return { error: true, data: err };
   }
 }
 
@@ -38,6 +38,6 @@ export async function updateUser(data) {
     return response.data;
   } catch (err) {
     console.log(err);
-    return true;
+    return { error: true, data: err };
   }
 }

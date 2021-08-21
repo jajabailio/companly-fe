@@ -5,7 +5,7 @@ import Joi from "joi-browser";
 
 class UserEditorModal extends Form {
   state = {
-    data: { firstName: "", lastName: "", email: "", role: "" },
+    data: { firstName: "", lastName: "", email: "", role: "Owner" },
     errors: {},
     roles: [
       {

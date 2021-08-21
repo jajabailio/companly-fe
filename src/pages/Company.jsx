@@ -25,6 +25,11 @@ class Copmany extends Component {
       currentState.editorModalShow = false;
       this.setState(currentState);
     } else {
+      if (company.error) {
+        if (company.data.response.status === 400)
+          alert(company.data.response.data);
+        return;
+      }
       company.users = [];
       const currentState = { ...this.state };
       currentState.companies.push(company);

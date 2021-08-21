@@ -42,7 +42,12 @@ class CompanyDetails extends Component {
   };
 
   handleUpdate = async (data) => {
-    await updateCompany(this.state.company._id, data);
+    const companyUpdated = await updateCompany(this.state.company._id, data);
+    if (companyUpdated.error) {
+      if (companyUpdated.data.response.status === 400)
+        alert(companyUpdated.data.response.data);
+      return;
+    }
     const company = { ...this.state.company };
     Object.assign(company, data);
     const currentState = { ...this.state };
@@ -72,8 +77,13 @@ class CompanyDetails extends Component {
   };
 
   handleUpdateUser = async (data) => {
-    await updateUser(data);
+    const userUpdated = await updateUser(data);
     const currentState = { ...this.state };
+    if (userUpdated.error) {
+      if (userUpdated.data.response.status === 400)
+        alert(userUpdated.data.response.data);
+      return;
+    }
     const company = { ...this.state.company };
     const index = company.users.findIndex((user) => user._id === data._id);
     const user = company.users[index];
@@ -94,6 +104,10 @@ class CompanyDetails extends Component {
       currentState.userModalShow = false;
       this.setState(currentState);
     } else {
+      if (user.error) {
+        if (user.data.response.status === 400) alert(user.data.response.data);
+        return;
+      }
       const company = { ...this.state.company };
       company.users.push(user);
       currentState.company = company;
@@ -110,6 +124,7 @@ class CompanyDetails extends Component {
     company.users = newUsers;
     currentState.company = company;
     currentState.userModalShow = false;
+    currentState.selectedUserUpdate = null;
     this.setState(currentState);
   };
 
