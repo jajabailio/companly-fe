@@ -4,7 +4,7 @@ import CompanyEditorModal from "../companyDetails/companyEditorModal";
 const AddCompanyButton = ({ modalShow, setModalShow, saveCompany }) => {
   return (
     <React.Fragment>
-      <div className="container text-center">
+      <div className="container text-center mt-5">
         <button
           className="btn btn-primary btn-lg"
           onClick={() => setModalShow(true)}

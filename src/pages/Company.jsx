@@ -47,6 +47,7 @@ class Copmany extends Component {
           companiesLength={this.state.companies.length}
         />
         <CompanyList companies={this.state.companies} />
+
         <AddCompanyButton
           modalShow={this.state.editorModalShow}
           setModalShow={this.handleShowModal}
