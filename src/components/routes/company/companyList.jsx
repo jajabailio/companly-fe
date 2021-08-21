@@ -8,9 +8,6 @@ const CompanyList = ({ companies }) => {
         {companies.map((company) => (
           <CompanyCard key={company._id} company={company} />
         ))}
-        {companies.map((company) => (
-          <CompanyCard key={company._id} company={company} />
-        ))}
       </div>
     </div>
   );
